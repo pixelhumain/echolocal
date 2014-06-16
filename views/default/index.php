@@ -70,7 +70,7 @@
 							$("#loginResult").html("");
 							params = { "email" : $("#emailLogin").val() , 
 							    	   "pwd" : $("#pwdLogin").val()};
-							testitpost("loginResult",'/ph/echolocal/default/login',params);
+							testitpost("loginResult", baseUrl+'/echolocal/default/login',params);
 							
 						}
 					</script>
@@ -104,7 +104,7 @@
 							    	   "cp" : $("#postalcodeSaveUser").val() , 
 							    	   "type" : $("#typeSaveUser").val(),
 							    	   "phoneNumber" : $("#phoneNumberSaveUser").val()};
-							testitpost("createUserResult",'/ph/echolocal/default/saveUser',params);
+							testitpost("createUserResult", baseUrl+'/echolocal/default/saveUser',params);
 						}
 					</script>
 				</div>
@@ -121,10 +121,10 @@
 					<div id="getUserResult" class="result fss"></div>
 					<script>
 						function getUser(){
-							testitget("getUserResult",'/ph/echolocal/default/getUser/email/'+$("#getUseremail").val());
+							testitget("getUserResult", baseUrl+'/echolocal/default/getUser/email/'+$("#getUseremail").val());
 						}
 						function confirmUserRegistration(){
-							testitget("getUserResult",'/ph/echolocal/default/confirmUserRegistration/email/'+$("#getUseremail").val());
+							testitget("getUserResult", baseUrl+'/echolocal/default/confirmUserRegistration/email/'+$("#getUseremail").val());
 						}
 					</script>
 				</div>
@@ -139,7 +139,7 @@
 					<div id="getPeopleResult" class="result fss"></div>
 					<script>
 						function getPeople(){
-							testitget("getPeopleResult",'/ph/echolocal/default/getPeople');
+							testitget("getPeopleResult", baseUrl+'/echolocal/default/getPeople');
 						}
 					</script>
 				</div>
@@ -189,7 +189,7 @@
 							if( $("#wheresaveGroup").val() )
 								paramas["where"] = $("#wheresaveGroup").val();
 							
-							testitpost("saveGroupResult",'/ph/echolocal/default/saveGroup',params);
+							testitpost("saveGroupResult", baseUrl+'/echolocal/default/saveGroup',params);
 						}
 						function typeChanged(){
 							console.log( $("#typesaveGroup").val() );
@@ -217,10 +217,10 @@
 					<div id="getGroupResult" class="result fss"></div>
 					<script>
 						function getGroup(){
-							testitget("getGroupResult",'/ph/echolocal/default/getGroup/email/'+$("#getGroupemail").val());
+							testitget("getGroupResult", baseUrl+'/echolocal/default/getGroup/email/'+$("#getGroupemail").val());
 						}
 						function confirmUserRegistration(){
-							testitget("getGroupResult",'/ph/echolocal/default/confirmGroupRegistration/email/'+$("#getGroupemail").val());
+							testitget("getGroupResult", baseUrl+'/echolocal/default/confirmGroupRegistration/email/'+$("#getGroupemail").val());
 						}
 					</script>
 				</div>
@@ -246,14 +246,14 @@
 					    	   "email" : $("#linkUser2Groupemail").val() , 
 					    	   "name" : $("#linkUser2GroupGroup").val() 
 					    	   };
-							testitpost("linkUser2GroupResult",'/ph/echolocal/default/linkUser2Group',params);
+							testitpost("linkUser2GroupResult", baseUrl+'/echolocal/default/linkUser2Group',params);
 						}
 						function unlinkUser2Group(){
 							params = { 
 					    	   "email" : $("#linkUser2Groupemail").val() , 
 					    	   "name" : $("#linkUser2GroupGroup").val() 
 					    	   };
-							testitpost("linkUser2GroupResult",'/ph/echolocal/default/unlinkUser2Group',params);
+							testitpost("linkUser2GroupResult", baseUrl+'/echolocal/default/unlinkUser2Group',params);
 						}
 					</script>
 				</div>
@@ -269,7 +269,7 @@
 					<div id="getGroupsResult" class="result fss"></div>
 					<script>
 						function getGroups(){
-							testitget("getGroupsResult",'/ph/echolocal/default/getGroups');
+							testitget("getGroupsResult", baseUrl+'/echolocal/default/getGroups');
 						}
 					</script>
 				</div>
